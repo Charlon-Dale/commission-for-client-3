@@ -22,21 +22,26 @@
             margin: auto;
             width: 50%;
             padding: 10px;
+            position: relative;
+            display: inline-block;
             
         }
         
         #my-dropdown {
-            position: relative;
-            display: inline-block;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        .dropdown-content {
             background-color: #04AA6D;
+            color: white;
             padding: 16px;
             font-size: 16px;
             border: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
 
         .dropdown-content option{
@@ -50,7 +55,7 @@
 
         #mydropdown:hover .dropdown-content {display: block;}
 
-        #mydropdown:hover .dropbtn {background-color: #3e8e41;}
+        #mydropdown:hover .center {background-color: #3e8e41;}
 
 
     </style>
@@ -59,14 +64,13 @@
     <div class="center">
         <h1> HOYOVERSE GAMES </h1>
         <label>Select an option:</label>
-        <select id="my-dropdown">
-            <div class="dropdown-content">
-                <option value="option1">GENSHIN IMPACT</option>
-                <option value="option2">HONKAI IMPACT 3RD</option>
-                <option value="option3">HONKAI STAR RAIL</option>
-                <option value="option4">ZENLESS ZONE ZERO</option>
-            </div>
-        </select>
+        <button id="my-dropdown">Hover me!</button>
+        <div class="dropdown-content">
+            <option>GENSHIN IMPACT</option>
+            <option>HONKAI IMPACT 3RD</option>
+            <option>HONKAI STAR RAIL</option>
+            <option>ZENLESS ZONE ZERO</option>
+        </div>
     </div>
 </body>
 </html>            
